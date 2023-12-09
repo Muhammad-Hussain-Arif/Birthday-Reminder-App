@@ -1,0 +1,282 @@
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #bbc70fd8, #7e0b14);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+}
+
+.App {
+  max-width: 600px;
+  width: 100%;
+  background-color: #0edbdbb9;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.App.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.App.dark-mode h1 {
+  color: #fff;
+}
+
+span {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.App.dark-mode span {
+  color: #fff;
+}
+
+span {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.App.dark-mode span {
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #494040;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #572c2c;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+
+.App.dark-mode .slider {
+  background-color: #333;
+}
+
+.App.dark-mode .slider:before {
+  background-color: #cccccc8e;
+}
+
+input:checked + .slider {
+  background-color: #007bffa6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #333; /* Set text color for the toggle container */
+}
+
+.App.dark-mode .toggle-container {
+  color: #ffffff83; /* Set text color for the toggle container in dark mode */
+}
+
+.toggle-container span {
+  font-size: 14px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #cccccc9a;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d16a15b9;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f969;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:hover {
+  background-color: #eaeaea;
+}
+
+button.edit {
+  background-color: #28a745;
+}
+
+button.remove {
+  background-color: #dc3545;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toggle-container span {
+  font-size: 14px;
+  color: #333;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc5e;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #ffffff81;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #007bffa1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.link {
+  margin-top: 100px; /* Adjust the top margin to control the distance from the content */
+  text-align: left;
+}
+
+.link a {
+  margin-top: 20px; /* Adjust the top margin to control the distance from the content */
+  display: block;
+}
+
+/* Alternatively, you can use flexbox to align the link at the bottom */
+/* Add this to your existing CSS */
+/*.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+}*/
+
+.link {
+  text-align: left;
+  margin-top: 50px; /* Adjust the bottom margin to control the distance from the content */
+}
